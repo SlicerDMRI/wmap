@@ -1,6 +1,6 @@
 # SZ-BD Study
 
-Schizophrenia (SZ)-Bipolar Disorder (BS) adolescent study.
+Schizophrenia (SZ)-Bipolar Disorder (BD) adolescent study.
 
 Boston Children's Hospital.
 
