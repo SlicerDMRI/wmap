@@ -158,8 +158,7 @@ Tools:
 
 ## Installation
 
-The pipeline was developed on an Ubuntu 22.04.3 LTS machine using Python
-3.8.17 (analysis) and Python 3.10.12 (data organization/standardization).
+The pipeline was developed on an Ubuntu 22.04.3 LTS machine using Python 3.10.
 
 Although not shown below, advanced users are encouraged to install the Python
 packages within a virtual environment. This minimizes the risk of
