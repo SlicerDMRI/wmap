@@ -577,10 +577,27 @@ tool.
 
 ## Relevant notes
 
+### Space
+
+By default, QSIprep output data are in subject space aligned to AC-PC: AC-PC
+alignment changes the coordinates from the native scanner coordinates to a new
+system where $0, 0, 0$ is where the midline intersects the anterior commissure.
+This is the same $0, 0, 0$ as in MNI space, so the brains will look somewhat
+aligned if you open the MNI template and the AC-PC image, as long as it is an
+adult brain, and despite no (MNI) template warping taking place by default.
+
+Further documentation can be found at:
+https://qsiprep.readthedocs.io/en/latest/quickstart.html?highlight=AC-pc#specifying-outputs
+
 ### Resolution
 
 The data is currently set to be resampled to a resolution of $1 x 1 x 1$ mm at
-the QSIPrep preprocessing step.
+the QSIPrep preprocessing step, in line with other notable dMRI processing
+pipelines, such as Tractoflow.
+
+The resampling step, added to the combination of the AP/PA data into a single
+file, together with any multi-shell data, explain the dMRI data large file
+size that it is seen at the output of the QSIPrep preprocessing workflow.
 
 ### Parameters
 
