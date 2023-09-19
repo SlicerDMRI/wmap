@@ -577,6 +577,18 @@ tool.
 
 ## Relevant notes
 
+### Space
+
+By default, QSIprep output data are in subject space aligned to AC-PC: AC-PC
+alignment changes the coordinates from the native scanner coordinates to a new
+system where $0, 0, 0$ is where the midline intersects the anterior commissure.
+This is the same $0, 0, 0$ as in MNI space, so the brains will look somewhat
+aligned if you open the MNI template and the AC-PC image, as long as it is an
+adult brain, and despite no (MNI) template warping taking place by default.
+
+Further documentation can be found at:
+https://qsiprep.readthedocs.io/en/latest/quickstart.html?highlight=AC-pc#specifying-outputs
+
 ### Resolution
 
 The data is currently set to be resampled to a resolution of $1 x 1 x 1$ mm at
