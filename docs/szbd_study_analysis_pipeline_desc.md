@@ -592,7 +592,12 @@ https://qsiprep.readthedocs.io/en/latest/quickstart.html?highlight=AC-pc#specify
 ### Resolution
 
 The data is currently set to be resampled to a resolution of $1 x 1 x 1$ mm at
-the QSIPrep preprocessing step.
+the QSIPrep preprocessing step, in line with other notable dMRI processing
+pipelines, such as Tractoflow.
+
+The resampling step, added to the combination of the AP/PA data into a single
+file, together with any multi-shell data, explain the dMRI data large file
+size that it is seen at the output of the QSIPrep preprocessing workflow.
 
 ### Parameters
 
