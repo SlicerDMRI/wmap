@@ -345,7 +345,7 @@ tool.
    $ bids-validator [path_to]
    ```
 
-   Set the input data path `[path_to]`` to the place where the above step has
+   Set the input data path `[path_to]` to the place where the above step has
    written the data to, e.g.
 
    ```shell
@@ -392,7 +392,7 @@ tool.
    filename).
 
    The `[in_bids_path]` argument needs to point to the dirname where the BIDS
-   `'dataset_description.json` file lies.
+   `dataset_description.json` file lies.
 
    Some steps of the script may take a long time to complete even for a single
    participant.
