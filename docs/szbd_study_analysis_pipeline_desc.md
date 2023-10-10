@@ -5,7 +5,10 @@ Analysis of dRMI data for the SZBD study.
 ## Introduction
 
 The assumptions in this pipeline are as follows:
+- All raw data is available in DICOM format.
 - All participants are assumed to have AP/PA dMRI acquisitions.
+- All participants are assumed to have field map acquisitions.
+- All participants are assumed to have T1w acquisitions.
 - All participants are assumed to have $b = 3000$ s/mm^2 dMRI data.
 - The data layout is kept consistent across runs: the only change may be in
   the participant identifier in the folders and filenames.
@@ -322,8 +325,8 @@ Versions used are:
    Additionally, the documentation in the file header should be read carelfully.
 
    The input data path `[in_data_path]` must be set to the place where the
-   data corresponding to all available participants exists, and pick an
-   appropriate location for the output `[path_to]` directory, e.g.
+   raw DICOM data corresponding to all available participants exists, and pick
+   an appropriate location for the output `[path_to]` directory, e.g.
 
   ```shell
   $ heudiconv \
@@ -332,6 +335,10 @@ Versions used are:
       -o /mnt/data/study_name_bids_data \
       --files /mnt/data/study_name_raw_data
   ```
+
+   Note that all raw imaging data needs to be in DICOM format; heudiconv does
+   not deal with raw imaging data in NIfTI format, and it will error if such
+   data is found in the input data path.
 
 ### Checking BIDS compliance
 
