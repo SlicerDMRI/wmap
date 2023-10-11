@@ -555,13 +555,13 @@ tool.
 1. Launch the bundle identification step using WMA:
 
    ```shell
-   $ wma_indentify_bundles.sh [in_tractography_fname] [atlas_dirname] [out_dirname]
+   $ wma_identify_bundles.sh [in_tractography_fname] [atlas_dirname] [out_dirname]
    ```
 
    e.g.
 
    ```shell
-   $ wma_indentify_bundles.sh \
+   $ wma_identify_bundles.sh \
        /mnt/data/study_name_bids_data/tractography_subsample/sub-001_acq-dir99_space-T1w_desc-preproc_dwi_b0_mean-b3000_pp.vtp \
        /mnt/data/atlas/org_atlas/ORG-Atlases-1.2 \
        /mnt/data/study_name_bids_data/wma
