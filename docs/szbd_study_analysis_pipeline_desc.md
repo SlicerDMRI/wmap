@@ -106,14 +106,14 @@ the user, such as DIPY, FreeSurfer, FSL or MRtrix, among others. The user is
 not required to install them, except for FreeSurfer, if the installation using
 containers is followed.
 
-### Data format accomodation
+### Data format accommodation
 
-This pipeline uses a the UKF tractography reconstruction method. The input
+This pipeline uses the UKF tractography reconstruction method. The input
 dMRI data required corresponds to the $b = 3000$ s/mm^2 shell data, in
-addition to the refernce $b = 0$ s/mm^2 shell data.
+addition to the reference $b = 0$ s/mm^2 shell data.
 
 All MRI data written by QSIprep is written using the NIfTI format. The dMRI
-data analysis tools (tractogrpahy and white matter bundle identification)
+data analysis tools (tractography and white matter bundle identification)
 require files to be in NRRD format, so the NIfTI files need to be converted to
 NRRD files.
 
@@ -172,8 +172,8 @@ tools used.
 
 1. Install heudiconv following: https://heudiconv.readthedocs.io/en/latest/installation.html#installation
 
-   Although a local install was used, Singularity would work in the same way;
-   only the way the tool is called would need to be changed.
+   Although a local installation was used, Singularity would work in the same
+   way; only the way the tool is called would need to be changed.
 
 1. Install the BIDS validator tool following: https://github.com/bids-standard/bids-validator#quickstart
 
@@ -254,14 +254,14 @@ Apptainer. Users may need to change the `singularity` command to `apptainer`
 in the future. Scripts should work transparently.
 {: .note}
 
-### Data format accomodation
+### Data format accommodation
 
 1. Install the Scilus Apptainer container following: https://tractoflow-documentation.readthedocs.io/en/latest/installation/install.html#singularity-for-tractoflow
 
    The SCILPY tools will be shipped inside this container, which requires
    Apptainer to be available on the system (see #preprocessing-1).
 
-   **Note:** The Scilus containers were primarily developped to support
+   **Note:** The Scilus containers were primarily developed to support
    [Tractoflow](https://tractoflow-documentation.readthedocs.io/en/latest/index.html).
    Tractoflow is a dMRI data processing pipeline in itself; Tractoflow is not
    used here, but some relevant documentation about the Scilus containers may
@@ -271,7 +271,7 @@ in the future. Scripts should work transparently.
 1. Install SlicerDMRI (see in #analysis-1): the diffusion data conversion tool
    (DWIConvert) is installed together with SlicerDMRI.
 
-1. Intall SimpleITK following the instructions: https://simpleitk.readthedocs.io/en/master/gettingStarted.html#wheels-for-generic-python-distribution
+1. Install SimpleITK following the instructions: https://simpleitk.readthedocs.io/en/master/gettingStarted.html#wheels-for-generic-python-distribution
 
 #### Versions
 
@@ -322,7 +322,7 @@ Versions used are:
    crucial parts for a correct identification of the data is the
    `protocols2fix` dictionary in that file. Some documentation is provided
    [here](https://heudiconv.readthedocs.io/en/latest/heuristics.html).
-   Additionally, the documentation in the file header should be read carelfully.
+   Additionally, the documentation in the file header should be read carefully.
 
    The input data path `[in_data_path]` must be set to the place where the
    raw DICOM data corresponding to all available participants exists, and pick
@@ -395,7 +395,7 @@ tool.
    The above command assumes that we have changed the directory to the path
    where the script lies, and that it has the appropriate permissions (most
    notably, execution permissions, which may be granted running
-   `chmod +x [my_file]` from a termainal and providing the appropriate
+   `chmod +x [my_file]` from a terminal and providing the appropriate
    filename).
 
    The `[in_bids_path]` argument needs to point to the dirname where the BIDS
@@ -426,7 +426,7 @@ tool.
    choice can be found in the https://qsiprep.readthedocs.io/en/latest/preprocessing.html?highlight=separate_all_dwis#merging-multiple-scans-from-a-session
    and https://qsiprep.readthedocs.io/en/latest/preprocessing.html#denoising-and-merging-images.
 
-## Data format accomodation
+## Data format accommodation
 
 ### b-value shell data extraction
 
@@ -461,7 +461,7 @@ tool.
    may raise the following warning:
 
    ```
-   /usr/local/lib/python3.7/dist-packages/dipy/io/gradients.py:75:
+   /usr/local/lib/python3.10/dist-packages/dipy/io/gradients.py:72:
    UserWarning: Detected only 1 direction on your bvec file.
    For diffusion dataset, it is recommended to have at least 3 directions.
    You may have problems during the reconstruction step.
@@ -505,8 +505,8 @@ tool.
 
    ```shell
    $ sitk_convert_mask_nifti2nrrd.sh \
-       /mnt/data/study_name_bids_data/qsiprep/sub-001/anat/sub-001_desc-brain_mask.nii.gz \
-       /mnt/data/study_name_bids_data/nifti2nrrd/sub-001_desc-brain_mask.nrrd
+       /mnt/data/study_name_bids_data/qsiprep/sub-001/anat/sub-001_acq-dir99_space-T1w_desc-brain_mask.nii.nii.gz \
+       /mnt/data/study_name_bids_data/nifti2nrrd/sub-001_acq-dir99_space-T1w_acq-dir99_space-T1w_desc-brain_mask.nrrd
    ```
 
    The script converts the source brainmask NIfTI data format file to an NRRD
@@ -527,15 +527,15 @@ tool.
    ```shell
    $ ukf_compute_tractography.sh \
        /mnt/data/study_name_bids_data/nifti2nrrd/sub-001_acq-dir99_space-T1w_desc-preproc_dwi_b0_mean-b3000.nrrd \
-       /mnt/data/study_name_bids_data/nifti2nrrd/sub-001_desc-brain_mask.nrrd \
+       /mnt/data/study_name_bids_data/nifti2nrrd/sub-001_acq-dir99_space-T1w_desc-brain_mask.nrrd \
        /mnt/data/study_name_bids_data/ukftractography/sub-001_acq-dir99_space-T1w_desc-preproc_dwi_b0_mean-b3000.vtk
    ```
 
-### Data accomodation
+### Data accommodation
 
 1. Limit the size of the computed tractogram by randomly subsampling the
    streamlines so that WMA can perform the bundle identification with a
-   reasonably sized tractogram. The general recomendation is to set an upper
+   reasonably sized tractogram. The general recommendation is to set an upper
    bound of $500000$ streamlines:
 
    ```shell
@@ -555,13 +555,13 @@ tool.
 1. Launch the bundle identification step using WMA:
 
    ```shell
-   $ wma_indentify_bundles.sh [in_tractography_fname] [atlas_dirname] [out_dirname]
+   $ wma_identify_bundles.sh [in_tractography_fname] [atlas_dirname] [out_dirname]
    ```
 
    e.g.
 
    ```shell
-   $ wma_indentify_bundles.sh \
+   $ wma_identify_bundles.sh \
        /mnt/data/study_name_bids_data/tractography_subsample/sub-001_acq-dir99_space-T1w_desc-preproc_dwi_b0_mean-b3000_pp.vtp \
        /mnt/data/atlas/org_atlas/ORG-Atlases-1.2 \
        /mnt/data/study_name_bids_data/wma
@@ -614,8 +614,7 @@ resolution in the `qsiprep_preprocess.sh` script, or the tractography
 parameters in the `ukf_compute_tractography.sh` script), and other parameters
 are kept to their default values. The proposed values were found to be
 appropriate for the data used during the development. Users are encouraged to
-adjust the parameter values if results are sub-optimal after visual
-inspection.
+adjust the parameter values if results are suboptimal after visual inspection.
 
 ### Python packages
 
