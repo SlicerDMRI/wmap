@@ -461,7 +461,7 @@ tool.
    may raise the following warning:
 
    ```
-   /usr/local/lib/python3.7/dist-packages/dipy/io/gradients.py:75:
+   /usr/local/lib/python3.10/dist-packages/dipy/io/gradients.py:72:
    UserWarning: Detected only 1 direction on your bvec file.
    For diffusion dataset, it is recommended to have at least 3 directions.
    You may have problems during the reconstruction step.
