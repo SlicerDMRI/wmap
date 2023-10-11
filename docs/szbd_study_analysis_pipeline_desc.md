@@ -505,8 +505,8 @@ tool.
 
    ```shell
    $ sitk_convert_mask_nifti2nrrd.sh \
-       /mnt/data/study_name_bids_data/qsiprep/sub-001/anat/sub-001_desc-brain_mask.nii.gz \
-       /mnt/data/study_name_bids_data/nifti2nrrd/sub-001_desc-brain_mask.nrrd
+       /mnt/data/study_name_bids_data/qsiprep/sub-001/anat/sub-001_acq-dir99_space-T1w_desc-brain_mask.nii.nii.gz \
+       /mnt/data/study_name_bids_data/nifti2nrrd/sub-001_acq-dir99_space-T1w_acq-dir99_space-T1w_desc-brain_mask.nrrd
    ```
 
    The script converts the source brainmask NIfTI data format file to an NRRD
@@ -527,7 +527,7 @@ tool.
    ```shell
    $ ukf_compute_tractography.sh \
        /mnt/data/study_name_bids_data/nifti2nrrd/sub-001_acq-dir99_space-T1w_desc-preproc_dwi_b0_mean-b3000.nrrd \
-       /mnt/data/study_name_bids_data/nifti2nrrd/sub-001_desc-brain_mask.nrrd \
+       /mnt/data/study_name_bids_data/nifti2nrrd/sub-001_acq-dir99_space-T1w_desc-brain_mask.nrrd \
        /mnt/data/study_name_bids_data/ukftractography/sub-001_acq-dir99_space-T1w_desc-preproc_dwi_b0_mean-b3000.vtk
    ```
 
