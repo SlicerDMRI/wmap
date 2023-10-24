@@ -151,8 +151,8 @@ Tools:
   - Documentation: -
   - Code repository: https://github.com/pnlbwh/ukftractography
 - White Matter Analysis (WMA)
-  - Website: -
-  - Documentation: https://dmri.slicer.org/whitematteranalysis/
+  - Website: https://dmri.slicer.org/whitematteranalysis/
+  - Documentation: https://whitematteranalysis.readthedocs.io/en/latest/
   - Code repository: https://github.com/SlicerDMRI/whitematteranalysis
 - ORG Atlas
   - Website: -
