@@ -1,3 +1,9 @@
+[build-system]
+requires = [
+    "setuptools >= 66",
+    "setuptools_scm >= 6.4",
+]
+
 [project]
 authors = [
   {name = "O'Donnnell lab"}, {email = "odonnell@bwh.harvard.edu"}
@@ -9,6 +15,7 @@ classifiers = [
     "Topic :: Scientific/Engineering :: Medical Science Apps.",
 ]
 description = "White Matter Analysis Pipeline (WMAP)"
+dynamic = ["version"]
 keywords = ["DWI, neuroimaging, tractography"]
 maintainers = [
   {name = "O'Donnnell lab"}, {email = "odonnell@bwh.harvard.edu"}
@@ -28,3 +35,6 @@ doc = [
 homepage = "https://github.com/SlicerDMRI/wmap"
 documentation = "https://wmap.readthedocs.io/en/latest/"
 repository = "https://github.com/SlicerDMRI/wmap"
+
+[tool.setuptools_scm]
+write_to = "./_version.py"
