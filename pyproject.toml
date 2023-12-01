@@ -1,0 +1,30 @@
+[project]
+authors = [
+  {name = "O'Donnnell lab"}, {email = "odonnell@bwh.harvard.edu"}
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+]
+description = "White Matter Analysis Pipeline (WMAP)"
+keywords = ["DWI, neuroimaging, tractography"]
+maintainers = [
+  {name = "O'Donnnell lab"}, {email = "odonnell@bwh.harvard.edu"}
+]
+name = "wmap"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+doc = [
+    "sphinx",
+    "sphinx-autodoc-typehints",
+    "furo",
+]
+
+[project.urls]
+homepage = "https://github.com/SlicerDMRI/wmap"
+documentation = "https://wmap.readthedocs.io/en/latest/"
+repository = "https://github.com/SlicerDMRI/wmap"
