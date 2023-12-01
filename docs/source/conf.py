@@ -15,6 +15,7 @@ from datetime import datetime
 
 # -- Project information -----------------------------------------------------
 
+project = "wmap"
 copyright = f"2023-{datetime.now().year}, O'Donnnell lab <odonnell@bwh.harvard.edu>"
 author = "O'Donnnell lab"
 
