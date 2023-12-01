@@ -1,9 +1,8 @@
-# SZ-BD Study
+# White Matter Analysis Pipeline (WMAP)
 
-Schizophrenia (SZ)-Bipolar Disorder (BD) adolescent study.
-
-Boston Children's Hospital.
+White Matter Analysis Pipeline (WMAP), a pipeline to analyze dRMI data: from
+DICOM to tractography.
 
 ## Data analysis pipeline description
 
-The adopted data analysis pipeline description can be found [here](./docs/szbd_study_analysis_pipeline_desc.md).
+The adopted data analysis pipeline description can be found [here](./docs/users_guide.md).

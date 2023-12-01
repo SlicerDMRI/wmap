@@ -1,6 +1,8 @@
-# Introduction
+# User's guide
 
-Analysis of dRMI data for the SZBD study.
+The following user's guide provides a detailed steps to be able to analyze
+white matter tissue features from dMRI data using the White Matter Analysis
+Pipeline (WMAP) tool.
 
 ## Introduction
 
