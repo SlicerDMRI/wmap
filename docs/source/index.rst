@@ -9,9 +9,3 @@ DICOM to tractography.
    :caption: Tutorials
 
    users_guide.md
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
