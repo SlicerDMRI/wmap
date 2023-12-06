@@ -11,7 +11,7 @@ The assumptions in this pipeline are as follows:
 - All participants are assumed to have AP/PA dMRI acquisitions.
 - All participants are assumed to have field map acquisitions.
 - All participants are assumed to have T1w acquisitions.
-- All participants are assumed to have $b = 3000$ s/mm^2 dMRI data.
+- All participants are assumed to have $$b = 3000$$ s/mm^2 dMRI data.
 - The data layout is kept consistent across runs: the only change may be in
   the participant identifier in the folders and filenames.
 - Generally, it is assumed that scripts are launched from a path where they
