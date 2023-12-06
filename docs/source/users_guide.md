@@ -265,7 +265,7 @@ Versions used are:
    instructions.
 
    The SCILPY tools will be shipped inside this container, which requires
-   Apptainer to be available on the system (see #preprocessing-1).
+   Apptainer to be available on the system (see [Preprocessing](#preprocessing)).
 
 > ℹ️ **Note**
 >
