@@ -377,7 +377,7 @@ tool.
 
 ## Preprocessing
 
-1. Run the script `qsiprep_preprocess.sh` from a terminal:
+1. Run the `qsiprep_preprocess.sh` script from a terminal:
 
    ```shell
    $ qsiprep_preprocess.sh [in_bids_path] [out_path] [fs_license_fname] [qsiprep_singularity_fname] [work_dir]
