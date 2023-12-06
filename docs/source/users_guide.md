@@ -73,12 +73,12 @@ The QSIprep preprocessing tool expects the input data to be BIDS-compliant.
 Tools:
 - heudiconv
   - Website: -
-  - Documentation: [https://heudiconv.readthedocs.io/en/latest/](https://heudiconv.readthedocs.io/en/latest/)
-  - Code repository: [https://github.com/nipy/heudiconv](https://github.com/nipy/heudiconv)
+  - Documentation: [heudiconv documentation]
+  - Code repository: [heudiconv code repository]
 - BIDS validator
-  - Website: [https://bids-specification.readthedocs.io/en/stable/](https://bids-specification.readthedocs.io/en/stable/)
-  - Documentation: [https://bids-standard.github.io/bids-starter-kit/validator.html#verifying-a-bids-compliant-data-set](https://bids-standard.github.io/bids-starter-kit/validator.html#verifying-a-bids-compliant-data-set)
-  - Code repository: [https://github.com/bids-standard/bids-validator](https://github.com/bids-standard/bids-validator)
+  - Website: [BIDS validator website]
+  - Documentation: [BIDS validator documentation]
+  - Code repository: [BIDS validator code repository]
 
 Note that organizing and standardizing the data layout according to BIDS is
 increasingly important for efficient work and collaboration, beyond the
@@ -91,17 +91,17 @@ different artifacts and prepare the data for downstream analysis.
 
 Tools:
 - Apptainer
-  - Website: [https://apptainer.org/](https://apptainer.org/)
-  - Documentation: [https://apptainer.org/docs/user/latest/](https://apptainer.org/docs/user/latest/)
-  - Code repository: [https://github.com/apptainer/apptainer](https://github.com/apptainer/apptainer)
+  - Website: [Apptainer website]
+  - Documentation: [Apptainer documentation]
+  - Code repository: [Apptainer code repository]
 - FreeSurfer
-  - Website: [https://surfer.nmr.mgh.harvard.edu/](https://surfer.nmr.mgh.harvard.edu/)
-  - Documentation: [https://surfer.nmr.mgh.harvard.edu/fswiki](https://surfer.nmr.mgh.harvard.edu/fswiki)
-  - Code repository: [https://github.com/freesurfer/freesurfer](https://github.com/freesurfer/freesurfer)
+  - Website: [FreeSurfer website]
+  - Documentation: [FreeSurfer documentation]
+  - Code repository: [FreeSurfer code repository]
 - QSIprep
   - Website: -
-  - Documentation: [https://qsiprep.readthedocs.io/en/latest/](https://qsiprep.readthedocs.io/en/latest/)
-  - Code repository: [https://github.com/PennLINC/qsiprep](https://github.com/PennLINC/qsiprep)
+  - Documentation: [QSIprep documentation]
+  - Code repository: [QSIprep code repository]
 
 QSIprep uses a number of other software tools under the hood, transparently to
 the user, such as DIPY, FreeSurfer, FSL or MRtrix, among others. The user is
@@ -124,15 +124,15 @@ brain tissue requires also a particular pixel type.
 
 Tools:
 - SCILPY (Scilus container)
-  - Website: [https://scil.usherbrooke.ca/pages/containers/](https://scil.usherbrooke.ca/pages/containers/)
+  - Website: [Scilus container website]
   - Documentation: -
-  - Code repository: [https://github.com/scilus/containers-scilus](https://github.com/scilus/containers-scilus)
+  - Code repository: [Scilus container code repository]
 - DWIConvert
   - (see SlicerDMRI in #analysis)
 - SimpleITK
-  - Website: [https://simpleitk.org/](https://simpleitk.org/)
-  - Documentation: [https://simpleitk.readthedocs.io/en/master/gettingStarted.html](https://simpleitk.readthedocs.io/en/master/gettingStarted.html)
-  - Code repository: [https://github.com/SimpleITK/SimpleITK](https://github.com/SimpleITK/SimpleITK)
+  - Website: [SimpleITK website]
+  - Documentation: [SimpleITK documentation]
+  - Code repository: [SimpleITK code repository]
 
 ### Analysis
 
@@ -141,24 +141,24 @@ dRMI data.
 
 Tools:
 - 3D Slicer
-  - Website: [https://www.slicer.org/](https://www.slicer.org/)
-  - Documentation: [https://slicer.readthedocs.io/en/latest/](https://slicer.readthedocs.io/en/latest/)
-  - Code repository: [https://github.com/Slicer/Slicer](https://github.com/Slicer/Slicer)
+  - Website: [3D Slicer website]
+  - Documentation: [3D Slicer documentation]
+  - Code repository: [3D Slicer code repository]
 - SlicerDMRI
-  - Website: [https://dmri.slicer.org/](https://dmri.slicer.org/)
-  - Documentation: [https://dmri.slicer.org/docs/](https://dmri.slicer.org/docs/)
-  - Code repository: [https://github.com/SlicerDMRI/SlicerDMRI](https://github.com/SlicerDMRI/SlicerDMRI)
+  - Website: [SlicerDMRI website]
+  - Documentation: [SlicerDMRI documentation]
+  - Code repository: [SlicerDMRI code repository]
 - UKFTractography
   - Website: -
   - Documentation: -
-  - Code repository: [https://github.com/pnlbwh/ukftractography](https://github.com/pnlbwh/ukftractography)
+  - Code repository: [UKFTractography code repository]
 - White Matter Analysis (WMA)
-  - Website: [https://dmri.slicer.org/whitematteranalysis/](https://dmri.slicer.org/whitematteranalysis/)
-  - Documentation: [https://whitematteranalysis.readthedocs.io/en/latest/](https://whitematteranalysis.readthedocs.io/en/latest/)
-  - Code repository: [https://github.com/SlicerDMRI/whitematteranalysis](https://github.com/SlicerDMRI/whitematteranalysis)
+  - Website: [WMA website]
+  - Documentation: [WMA documentation]
+  - Code repository: [WMA code repository]
 - ORG Atlas
   - Website: -
-  - Documentation: [https://github.com/SlicerDMRI/ORG-Atlases](https://github.com/SlicerDMRI/ORG-Atlases)
+  - Documentation: [ORG Atlas documentation]
   - Code repository: N/A
 
 ## Installation
@@ -661,3 +661,45 @@ In order to solve this, `NumPy` needs to be downgraded, i.e.
 ## Citations
 
 Please cite appropriately each of the packages used in this pipeline.
+
+
+[BIDS validator code repository]: https://github.com/bids-standard/bids-validator
+[BIDS validator documentation]: https://bids-standard.github.io/bids-starter-kit/validator.html#verifying-a-bids-compliant-data-set
+[BIDS validator website]: https://bids-specification.readthedocs.io/en/stable/
+
+[3D Slicer code repository]: https://github.com/Slicer/Slicer
+[3D Slicer documentation]: https://slicer.readthedocs.io/en/latest/
+[3D Slicer website]: https://www.slicer.org/
+
+[Apptainer code repository]: https://github.com/apptainer/apptainer
+[Apptainer documentation]: https://apptainer.org/docs/user/latest/
+[Apptainer website]: https://apptainer.org/
+
+[FreeSurfer code repository]: https://github.com/freesurfer/freesurfer
+[FreeSurfer documentation]: https://surfer.nmr.mgh.harvard.edu/fswiki
+[FreeSurfer website]: https://surfer.nmr.mgh.harvard.edu/
+
+[ORG Atlas documentation]: https://github.com/SlicerDMRI/ORG-Atlases
+
+[QSIprep code repository]: https://github.com/PennLINC/qsiprep
+[QSIprep documentation]: https://qsiprep.readthedocs.io/en/latest/
+
+[Scilus container code repository]: https://github.com/scilus/containers-scilus
+[Scilus container website]: https://scil.usherbrooke.ca/pages/containers/
+
+[SimpleITK code repository]: https://github.com/SimpleITK/SimpleITK
+[SimpleITK documentation]: https://simpleitk.readthedocs.io/en/master/gettingStarted.html
+[SimpleITK website]: https://simpleitk.org/
+
+[SlicerDMRI code repository]: https://github.com/SlicerDMRI/SlicerDMRI
+[SlicerDMRI documentation]: https://dmri.slicer.org/docs/
+[SlicerDMRI website]: https://dmri.slicer.org/
+
+[UKFTractography code repository]: https://github.com/pnlbwh/ukftractography
+
+[WMA code repository]: https://github.com/SlicerDMRI/whitematteranalysis
+[WMA documentation]: https://whitematteranalysis.readthedocs.io/en/latest/
+[WMA website]: https://dmri.slicer.org/whitematteranalysis/
+
+[heudiconv code repository]: https://github.com/nipy/heudiconv
+[heudiconv documentation]: https://heudiconv.readthedocs.io/en/latest/
