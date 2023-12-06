@@ -129,13 +129,13 @@ Tools:
   - Documentation: -
   - Code repository: [Scilus container code repository]
 - DWIConvert
-  - (see SlicerDMRI in #analysis)
+  - (see SlicerDMRI in [Analysis](#analysis))
 - SimpleITK
   - Website: [SimpleITK website]
   - Documentation: [SimpleITK documentation]
   - Code repository: [SimpleITK code repository]
 
-### Analysis {#analysis}
+### <a id="analysis"></a> Analysis
 
 Its purpose is to reconstruct the white matter fibers from the preprocessed
 dRMI data.
