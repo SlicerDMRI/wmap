@@ -91,9 +91,9 @@ different artifacts and prepare the data for downstream analysis.
 
 Tools:
 - Apptainer
-  - Website: https://surfer.nmr.mgh.harvard.edu/
-  - Documentation: https://surfer.nmr.mgh.harvard.edu/fswiki
-  - Code repository: https://github.com/freesurfer/freesurfer
+  - Website: https://apptainer.org/
+  - Documentation: https://apptainer.org/docs/user/latest/
+  - Code repository: https://github.com/apptainer/apptainer
 - FreeSurfer
   - Website: https://surfer.nmr.mgh.harvard.edu/
   - Documentation: https://surfer.nmr.mgh.harvard.edu/fswiki
@@ -377,7 +377,7 @@ tool.
 
 ## Preprocessing
 
-1. Run the script `qsiprep_preprocess.sh` from a terminal:
+1. Run the `qsiprep_preprocess.sh` script from a terminal:
 
    ```shell
    $ qsiprep_preprocess.sh [in_bids_path] [out_path] [fs_license_fname] [qsiprep_singularity_fname] [work_dir]
