@@ -17,8 +17,9 @@ The assumptions in this pipeline are as follows:
 - Generally, it is assumed that scripts are launched from a path where they
   are known.
 - The only steps that can process all participant data at once are those in
-  the #data-organizationstandardization and #preprocessing sections; the
-  rest of the steps need to be run individually for each participant.
+  the [Data organization/standardization](#data-organizationstandardization)
+  and [Preprocessing](#preprocessing) sections; the rest of the steps need to
+  be run individually for each participant.
 
 Note that:
 - Data file paths may need to be adjusted.
@@ -62,7 +63,7 @@ where `[my_script]` corresponds to the name of the script.
 
 ## Pipeline description
 
-### Data organization/standardization
+### <a id="data-organizationstandardization"></a>Data organization/standardization
 
 The purpose of this step is to produce a consistent layout and NIfTI-centered
 data format from the DICOM data files obtained from the scanner. The [BIDS standard](https://bids.neuroimaging.io/)
@@ -84,7 +85,7 @@ Note that organizing and standardizing the data layout according to BIDS is
 increasingly important for efficient work and collaboration, beyond the
 requirement by QSIprep.
 
-### Preprocessing
+### <a id="preprocessing"></a>Preprocessing
 
 Its purpose, among others, is denoise the T1w and dRMI data to correct for
 different artifacts and prepare the data for downstream analysis.
@@ -134,7 +135,7 @@ Tools:
   - Documentation: [SimpleITK documentation]
   - Code repository: [SimpleITK code repository]
 
-### Analysis
+### Analysis {#analysis}
 
 Its purpose is to reconstruct the white matter fibers from the preprocessed
 dRMI data.
@@ -271,8 +272,9 @@ in the future. Scripts should work transparently.
    be found on its website.
    {: .note}
 
-1. Install SlicerDMRI (see in #analysis-1): the diffusion data conversion tool
-   (DWIConvert) is installed together with SlicerDMRI.
+1. Install SlicerDMRI (see in [Analysis-installation](#analysis-installation)):
+   the diffusion data conversion tool (DWIConvert) is installed together with
+   SlicerDMRI.
 
 1. Install SimpleITK using the [Python wheels](https://simpleitk.readthedocs.io/en/master/gettingStarted.html#wheels-for-generic-python-distribution)
 
@@ -280,10 +282,10 @@ in the future. Scripts should work transparently.
 
 Versions used are:
 - SCILPY (Scilus container): scilus 1.5.0
-- DWIConvert: (see SlicerDMRI version in #versions-3)
+- DWIConvert: (see SlicerDMRI version in [Analysis-versions](#analysis-versions))
 - SimpleITK: 2.2.1
 
-### Analysis
+### <a id="analysis-installation"></a>Analysis
 
 1. Download and install 3D Slicer following the instructions in the
    [Installing 3D Slicer](https://slicer.readthedocs.io/en/latest/user_guide/getting_started.html#installing-3d-slicer)
@@ -303,7 +305,7 @@ Versions used are:
 1. Download the version of the ORG Atlas that is intended to be used from the
    [8082481 Zenodo record](https://zenodo.org/records/8082481)
 
-#### Versions
+#### <a id="analysis-versions"></a>Versions
 
 Versions used are:
 - 3D Slicer: 5.2.2 r31382 / fb46bd1
