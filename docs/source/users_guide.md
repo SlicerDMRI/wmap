@@ -265,7 +265,7 @@ Versions used are:
    instructions.
 
    The SCILPY tools will be shipped inside this container, which requires
-   Apptainer to be available on the system (see #preprocessing-1).
+   Apptainer to be available on the system (see [Preprocessing](#preprocessing)).
 
 > ℹ️ **Note**
 >
@@ -274,7 +274,7 @@ Versions used are:
 > used here, but some relevant documentation about the Scilus containers may
 > be found on its website.
 
-1. Install SlicerDMRI (see in [Analysis-installation](#analysis-installation)):
+1. Install SlicerDMRI (see [Analysis-installation](#analysis-installation)):
    the diffusion data conversion tool (DWIConvert) is installed together with
    SlicerDMRI.
 
