@@ -55,7 +55,7 @@ Note that:
 
 The help for all scripts provided can be retrieved by typing in a terminal:
 
-```shell
+```bash
 $ [my_script] -h
 ```
 
@@ -221,13 +221,13 @@ Versions used are:
 
    Pick an appropriate path (the folder must exist) to host the `*.sif` file, e.g.:
 
-   ```shell
+   ```bash
    $ singularity build /mnt/data/containers/qsiprep/qsiprep-0.19.0.sif docker://pennbbl/qsiprep:0.19.0
    ```
 
    If the following error appears when building the container:
 
-   ```shell
+   ```bash
    INFO:    Creating SIF file...
    FATAL:   While performing build: while creating squashfs: create command failed: exit status 1: Write failed because No space left on device
    FATAL ERROR: Failed to write to output filesystem
@@ -239,7 +239,7 @@ Versions used are:
    sufficient disk space using the `--tmpdir` option. Pick an appropriate path
    for this purpose (the folder must exist), e.g.:
 
-   ```shell
+   ```bash
    $ singularity build --tmpdir /mnt/data/containers/.singularity /mnt/data/containers/qsiprep/qsiprep-0.19.0.sif docker://pennbbl/qsiprep:0.19.0
    ```
 
@@ -322,7 +322,7 @@ Versions used are:
 
 1. Run the following command from a terminal:
 
-   ```shell
+   ```bash
    $ heudiconv -f [heuristic_name_or_path_to_file] --bids -o [path_to] --files [in_data_path]
    ```
 
@@ -340,7 +340,7 @@ Versions used are:
    raw DICOM data corresponding to all available participants exists, and pick
    an appropriate location for the output `[path_to]` directory, e.g.
 
-  ```shell
+  ```bash
   $ heudiconv \
       -f /mnt/data/study_name/bids_config/study_name_heuristic.py \
       --bids \
@@ -360,20 +360,20 @@ tool.
 
 1. Check that the data that has been written conforms to BIDS running:
 
-   ```shell
+   ```bash
    $ bids-validator [path_to]
    ```
 
    Set the input data path `[path_to]` to the place where the above step has
    written the data to, e.g.
 
-   ```shell
+   ```bash
    $ bids-validator /mnt/data/study_name_bids_data
    ```
 
    No warnings or errors should be present, e.g.:
 
-   ```shell
+   ```bash
    $ bids-validator /mnt/data/study_name_bids_data
    bids-validator@1.12.0
    This dataset appears to be BIDS compatible.
@@ -389,13 +389,13 @@ tool.
 
 1. Run the `qsiprep_preprocess.sh` script from a terminal:
 
-   ```shell
+   ```bash
    $ qsiprep_preprocess.sh [in_bids_path] [out_path] [fs_license_fname] [qsiprep_singularity_fname] [work_dir]
    ```
 
    e.g.
 
-   ```shell
+   ```bash
    $ qsiprep_preprocess.sh \
        /mnt/data/study_name_bids_data/heudiconv \
        /mnt/data/study_name_bids_data/qsiprep \
@@ -458,13 +458,13 @@ tool.
    on the $b = 3000$ s/mm^2 shell data, the mean _b0_ serving as the
    reference.
 
-   ```shell
+   ```bash
    $ scilpy_prepare_shell_data.sh [in_nifti_fname] [in_bval_fname] [in_bvec_fname] [out_dirname] [scilus_singularity_fname] [data_dirname]
    ```
 
    e.g.
 
-   ```shell
+   ```bash
    $ scilpy_prepare_shell_data.sh \
        /mnt/data/study_name_bids_data/qsiprep/sub-001/dwi/sub-001_acq-dir99_space-T1w_desc-preproc_dwi.nii.gz \
        /mnt/data/study_name_bids_data/qsiprep/sub-001/dwi/sub-001_acq-dir99_space-T1w_desc-preproc_dwi.bval \
@@ -495,13 +495,13 @@ tool.
    be in NRRD (or NHDR) format. 3D Slicer's tool DWIConvert tool is used to
    perform the NIfTI to NRRD conversion:
 
-   ```shell
+   ```bash
    $ slicer_convert_nifti2nrrd.sh [in_nifti_fname] [in_bval_fname] [in_bvec_fname] [out_nrrd_fname]
    ```
 
    e.g.
 
-   ```shell
+   ```bash
    $ slicer_convert_nifti2nrrd.sh \
        /mnt/data/study_name_bids_data/prepare_shell_data/sub-001_acq-dir99_space-T1w_desc-preproc_dwi_b0_mean-b3000.nii.gz \
        /mnt/data/study_name_bids_data/prepare_shell_data/sub-001_acq-dir99_space-T1w_desc-preproc_dwi_b0_mean-b3000.bval \
@@ -514,13 +514,13 @@ tool.
    `short`, and `unsigned short`) so that UKF can process it. SimpleITK is
    used for such purpose:
 
-   ```shell
+   ```bash
    $ sitk_convert_mask_nifti2nrrd.sh [in_fname] [out_fname]
    ```
 
    e.g.
 
-   ```shell
+   ```bash
    $ sitk_convert_mask_nifti2nrrd.sh \
        /mnt/data/study_name_bids_data/qsiprep/sub-001/anat/sub-001_acq-dir99_space-T1w_desc-brain_mask.nii.nii.gz \
        /mnt/data/study_name_bids_data/nifti2nrrd/sub-001_acq-dir99_space-T1w_acq-dir99_space-T1w_desc-brain_mask.nrrd
@@ -535,13 +535,13 @@ tool.
 
 1. Compute the tractography from the preprocessed diffusion data:
 
-   ```shell
+   ```bash
    $ ukf_compute_tractography.sh [in_dmri_fname] [in_mask_fname] [out_tractography_fname]
    ```
 
    e.g.
 
-   ```shell
+   ```bash
    $ ukf_compute_tractography.sh \
        /mnt/data/study_name_bids_data/nifti2nrrd/sub-001_acq-dir99_space-T1w_desc-preproc_dwi_b0_mean-b3000.nrrd \
        /mnt/data/study_name_bids_data/nifti2nrrd/sub-001_acq-dir99_space-T1w_desc-brain_mask.nrrd \
@@ -555,13 +555,13 @@ tool.
    reasonably sized tractogram. The general recommendation is to set an upper
    bound of $500000$ streamlines:
 
-   ```shell
+   ```bash
    $ wma_subsample_tractogram.sh [in_dirname] [out_dirname]
    ```
 
    e.g.
 
-   ```shell
+   ```bash
    $ wma_subsample_tractogram.sh \
        /mnt/data/study_name_bids_data/ukftractography \
        /mnt/data/study_name_bids_data/tractography_subsample
@@ -571,13 +571,13 @@ tool.
 
 1. Launch the bundle identification step using WMA:
 
-   ```shell
+   ```bash
    $ wma_identify_bundles.sh [in_tractography_fname] [atlas_dirname] [out_dirname]
    ```
 
    e.g.
 
-   ```shell
+   ```bash
    $ wma_identify_bundles.sh \
        /mnt/data/study_name_bids_data/tractography_subsample/sub-001_acq-dir99_space-T1w_desc-preproc_dwi_b0_mean-b3000_pp.vtp \
        /mnt/data/atlas/org_atlas/ORG-Atlases-1.2 \
@@ -588,7 +588,7 @@ tool.
    >
    > If the bundle statistics computation step fails with the following error:
    >
-   > ```shell
+   > ```bash
    > ERROR: Reporting diffusion measurements of fiber clusters. failed. No diffusion measurement (.csv) files generated.
    > ```
    >
