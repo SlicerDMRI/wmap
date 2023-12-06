@@ -91,9 +91,9 @@ different artifacts and prepare the data for downstream analysis.
 
 Tools:
 - Apptainer
-  - Website: https://surfer.nmr.mgh.harvard.edu/
-  - Documentation: https://surfer.nmr.mgh.harvard.edu/fswiki
-  - Code repository: https://github.com/freesurfer/freesurfer
+  - Website: https://apptainer.org/
+  - Documentation: https://apptainer.org/docs/user/latest/
+  - Code repository: https://github.com/apptainer/apptainer
 - FreeSurfer
   - Website: https://surfer.nmr.mgh.harvard.edu/
   - Documentation: https://surfer.nmr.mgh.harvard.edu/fswiki
