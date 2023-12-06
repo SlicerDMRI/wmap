@@ -208,12 +208,13 @@ Versions used are:
    Apptainer is an open-source equivalent to Docker; these both container
    systems allow to ship all necessary dependencies.
 
-   **Note:** Apptainer containers have access only to a limited set of paths
-   in the host machine (called "bind points"), so users may need to specify
-   other paths so that the container obtains access to the data hosted on such
-   paths. The relevant information can be found at the [Bind Paths and Mounts](https://apptainer.org/docs/user/main/bind_paths_and_mounts.html)
-   section.
-   {: .note}
+> ℹ️ **Note**
+>
+> Apptainer containers have access only to a limited set of paths in the host
+> machine (called "bind points"), so users may need to specify other paths
+> so that the container obtains access to the data hosted on such paths. The
+> relevant information can be found at the [Bind Paths and Mounts](https://apptainer.org/docs/user/main/bind_paths_and_mounts.html)
+> section.
 
 1. Build the [QSIprep Apptainer (Singularity) container](https://qsiprep.readthedocs.io/en/latest/installation.html#singularity-container)
    (output is a file with the extension `sif`).
@@ -251,10 +252,11 @@ Versions used are:
 - FreeSufer: freesurfer-linux-ubuntu22_x86_64-7.3.2-20220804-6354275
 - QSIprep: 0.19.0
 
-**Note:** The scripts provided were developed Singularity instead of
-Apptainer. Users may need to change the `singularity` command to `apptainer`
-in the future. Scripts should work transparently.
-{: .note}
+> ℹ️ **Note**
+>
+> The scripts provided were developed Singularity instead of Apptainer. Users
+> may need to change the `singularity` command to `apptainer` in the future.
+> Scripts should work transparently.
 
 ### Data format accommodation
 
@@ -265,12 +267,12 @@ in the future. Scripts should work transparently.
    The SCILPY tools will be shipped inside this container, which requires
    Apptainer to be available on the system (see #preprocessing-1).
 
-   **Note:** The Scilus containers were primarily developed to support
-   [Tractoflow](https://tractoflow-documentation.readthedocs.io/en/latest/index.html).
-   Tractoflow is a dMRI data processing pipeline in itself; Tractoflow is not
-   used here, but some relevant documentation about the Scilus containers may
-   be found on its website.
-   {: .note}
+> ℹ️ **Note**
+>
+> The Scilus containers were primarily developed to support [Tractoflow](https://tractoflow-documentation.readthedocs.io/en/latest/index.html).
+> Tractoflow is a dMRI data processing pipeline in itself; Tractoflow is not
+> used here, but some relevant documentation about the Scilus containers may
+> be found on its website.
 
 1. Install SlicerDMRI (see in [Analysis-installation](#analysis-installation)):
    the diffusion data conversion tool (DWIConvert) is installed together with
@@ -414,28 +416,32 @@ tool.
    Some steps of the script may take a long time to complete even for a single
    participant.
 
-   **Note:** Apptainer uses an intermediate work directory (`--work_dir`)
-   where intermediate files are written as the processing take place, and
-   before the final data gets written to the destination path. This work
-   directory may grow considerably, even for a single participant. Similarly,
-   if some jobs (e.g. processing some participant data) were terminated
-   unexpectedly, and for some reason, dirnames (e.g. the root dirname) are
-   manually changed between runs, since `qsiprep` will try to pick and re-run
-   unfinished jobs (which are traced through the data stored in the work
-   directory), this may give rise to exceptions derived from
-   `FileNotFoundError: No such file or no access` errors, as previous
-   filenames and dirnames will be present in the work directory.
-   {: .note}
+> ℹ️ **Note**
+>
+> Apptainer uses an intermediate work directory (`--work_dir`) where
+> intermediate files are written as the processing take place, and before the
+> final data gets written to the destination path. This work directory may
+> grow considerably, even for a single participant. Similarly, if some jobs
+> (e.g. processing some participant data) were terminated unexpectedly, and
+> for some reason, dirnames (e.g. the root dirname) are manually changed
+> between runs, since `qsiprep` will try to pick and re-run unfinished jobs
+> (which are traced through the data stored in the work directory), this may
+> give rise to exceptions derived from `FileNotFoundError: No such file or no
+> access` errors, as previous filenames and dirnames will be present in the
+> work directory.
 
-   **Note:** The brainmask may need to be adjusted manually (e.g. using 3D
-   Slicer) if the result is not accurate enough.
-   {: .note}
+> ℹ️ **Note**
+>
+> The brainmask may need to be adjusted manually (e.g. using 3D Slicer) if the
+> result is not accurate enough.
 
-   **Note:** The denoising step in the preprocessing operation is chosen to
-   be applied to all combined dMRI data. Further information related to this
-   choice can be found in the [Merging multiple scans from a session](https://qsiprep.readthedocs.io/en/latest/preprocessing.html?highlight=separate_all_dwis#merging-multiple-scans-from-a-session)
-   and [Denoising and Merging Images](https://qsiprep.readthedocs.io/en/latest/preprocessing.html#denoising-and-merging-images)
-   sections of the QSIprep documentation.
+> ℹ️ **Note**
+>
+> The denoising step in the preprocessing operation is chosen to be applied to
+> all combined dMRI data. Further information related to this choice can be
+> found in the [Merging multiple scans from a session](https://qsiprep.readthedocs.io/en/latest/preprocessing.html?highlight=separate_all_dwis#merging-multiple-scans-from-a-session)
+> and [Denoising and Merging Images](https://qsiprep.readthedocs.io/en/latest/preprocessing.html#denoising-and-merging-images)
+> sections of the QSIprep documentation.
 
 ## Data format accommodation
 
@@ -578,20 +584,20 @@ tool.
        /mnt/data/study_name_bids_data/wma
    ```
 
-   **Note:** If the bundle statistics computation step fails with the
-   following error:
-
-   ```shell
-   ERROR: Reporting diffusion measurements of fiber clusters. failed. No diffusion measurement (.csv) files generated.
-   ```
-
-   the statistics can be computed from the 3D Slicer Graphical User Interface:
-   by selecting the `Diffusion/Quantify/Tractography Measurements` menu, the
-   folder that contains the identified bundles (typically names
-   `AnatomicalTracts` after WMA has run), can be selected, and an output
-   filename be given to obtain the statistics of interest. Selecting the
-   `Column_Hierarchy` option allows to lay out the statistics across columns.
-   {: .note}
+   > ℹ️ **Note**
+   >
+   > If the bundle statistics computation step fails with the following error:
+   >
+   > ```shell
+   > ERROR: Reporting diffusion measurements of fiber clusters. failed. No diffusion measurement (.csv) files generated.
+   > ```
+   >
+   > the statistics can be computed from the 3D Slicer Graphical User Interface:
+   > by selecting the `Diffusion/Quantify/Tractography Measurements` menu, the
+   > folder that contains the identified bundles (typically names
+   > `AnatomicalTracts` after WMA has run), can be selected, and an output
+   > filename be given to obtain the statistics of interest. Selecting the
+   > `Column_Hierarchy` option allows to lay out the statistics across columns.
 
 ## Relevant notes
 
