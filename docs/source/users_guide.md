@@ -73,12 +73,12 @@ The QSIprep preprocessing tool expects the input data to be BIDS-compliant.
 Tools:
 - heudiconv
   - Website: -
-  - Documentation: https://heudiconv.readthedocs.io/en/latest/
-  - Code repository: https://github.com/nipy/heudiconv
+  - Documentation: [https://heudiconv.readthedocs.io/en/latest/](https://heudiconv.readthedocs.io/en/latest/)
+  - Code repository: [https://github.com/nipy/heudiconv](https://github.com/nipy/heudiconv)
 - BIDS validator
-  - Website: https://bids-specification.readthedocs.io/en/stable/
-  - Documentation: https://bids-standard.github.io/bids-starter-kit/validator.html#verifying-a-bids-compliant-data-set
-  - Code repository: https://github.com/bids-standard/bids-validator
+  - Website: [https://bids-specification.readthedocs.io/en/stable/](https://bids-specification.readthedocs.io/en/stable/)
+  - Documentation: [https://bids-standard.github.io/bids-starter-kit/validator.html#verifying-a-bids-compliant-data-set](https://bids-standard.github.io/bids-starter-kit/validator.html#verifying-a-bids-compliant-data-set)
+  - Code repository: [https://github.com/bids-standard/bids-validator](https://github.com/bids-standard/bids-validator)
 
 Note that organizing and standardizing the data layout according to BIDS is
 increasingly important for efficient work and collaboration, beyond the
@@ -91,17 +91,17 @@ different artifacts and prepare the data for downstream analysis.
 
 Tools:
 - Apptainer
-  - Website: https://apptainer.org/
-  - Documentation: https://apptainer.org/docs/user/latest/
-  - Code repository: https://github.com/apptainer/apptainer
+  - Website: [https://apptainer.org/](https://apptainer.org/)
+  - Documentation: [https://apptainer.org/docs/user/latest/](https://apptainer.org/docs/user/latest/)
+  - Code repository: [https://github.com/apptainer/apptainer](https://github.com/apptainer/apptainer)
 - FreeSurfer
-  - Website: https://surfer.nmr.mgh.harvard.edu/
-  - Documentation: https://surfer.nmr.mgh.harvard.edu/fswiki
-  - Code repository: https://github.com/freesurfer/freesurfer
+  - Website: [https://surfer.nmr.mgh.harvard.edu/](https://surfer.nmr.mgh.harvard.edu/)
+  - Documentation: [https://surfer.nmr.mgh.harvard.edu/fswiki](https://surfer.nmr.mgh.harvard.edu/fswiki)
+  - Code repository: [https://github.com/freesurfer/freesurfer](https://github.com/freesurfer/freesurfer)
 - QSIprep
   - Website: -
-  - Documentation: https://qsiprep.readthedocs.io/en/latest/
-  - Code repository: https://github.com/PennLINC/qsiprep
+  - Documentation: [https://qsiprep.readthedocs.io/en/latest/](https://qsiprep.readthedocs.io/en/latest/)
+  - Code repository: [https://github.com/PennLINC/qsiprep](https://github.com/PennLINC/qsiprep)
 
 QSIprep uses a number of other software tools under the hood, transparently to
 the user, such as DIPY, FreeSurfer, FSL or MRtrix, among others. The user is
@@ -124,15 +124,15 @@ brain tissue requires also a particular pixel type.
 
 Tools:
 - SCILPY (Scilus container)
-  - Website: https://scil.usherbrooke.ca/pages/containers/
+  - Website: [https://scil.usherbrooke.ca/pages/containers/](https://scil.usherbrooke.ca/pages/containers/)
   - Documentation: -
-  - Code repository: https://github.com/scilus/containers-scilus
+  - Code repository: [https://github.com/scilus/containers-scilus](https://github.com/scilus/containers-scilus)
 - DWIConvert
   - (see SlicerDMRI in #analysis)
 - SimpleITK
-  - Website: https://simpleitk.org/
-  - Documentation: https://simpleitk.readthedocs.io/en/master/gettingStarted.html
-  - Code repository: https://github.com/SimpleITK/SimpleITK
+  - Website: [https://simpleitk.org/](https://simpleitk.org/)
+  - Documentation: [https://simpleitk.readthedocs.io/en/master/gettingStarted.html](https://simpleitk.readthedocs.io/en/master/gettingStarted.html)
+  - Code repository: [https://github.com/SimpleITK/SimpleITK](https://github.com/SimpleITK/SimpleITK)
 
 ### Analysis
 
@@ -141,24 +141,24 @@ dRMI data.
 
 Tools:
 - 3D Slicer
-  - Website: https://www.slicer.org/
-  - Documentation: https://slicer.readthedocs.io/en/latest/
-  - Code repository: https://github.com/Slicer/Slicer
+  - Website: [https://www.slicer.org/](https://www.slicer.org/)
+  - Documentation: [https://slicer.readthedocs.io/en/latest/](https://slicer.readthedocs.io/en/latest/)
+  - Code repository: [https://github.com/Slicer/Slicer](https://github.com/Slicer/Slicer)
 - SlicerDMRI
-  - Website: https://dmri.slicer.org/
-  - Documentation: https://dmri.slicer.org/docs/
-  - Code repository: https://github.com/SlicerDMRI/SlicerDMRI
+  - Website: [https://dmri.slicer.org/](https://dmri.slicer.org/)
+  - Documentation: [https://dmri.slicer.org/docs/](https://dmri.slicer.org/docs/)
+  - Code repository: [https://github.com/SlicerDMRI/SlicerDMRI](https://github.com/SlicerDMRI/SlicerDMRI)
 - UKFTractography
   - Website: -
   - Documentation: -
-  - Code repository: https://github.com/pnlbwh/ukftractography
+  - Code repository: [https://github.com/pnlbwh/ukftractography](https://github.com/pnlbwh/ukftractography)
 - White Matter Analysis (WMA)
-  - Website: https://dmri.slicer.org/whitematteranalysis/
-  - Documentation: https://whitematteranalysis.readthedocs.io/en/latest/
-  - Code repository: https://github.com/SlicerDMRI/whitematteranalysis
+  - Website: [https://dmri.slicer.org/whitematteranalysis/](https://dmri.slicer.org/whitematteranalysis/)
+  - Documentation: [https://whitematteranalysis.readthedocs.io/en/latest/](https://whitematteranalysis.readthedocs.io/en/latest/)
+  - Code repository: [https://github.com/SlicerDMRI/whitematteranalysis](https://github.com/SlicerDMRI/whitematteranalysis)
 - ORG Atlas
   - Website: -
-  - Documentation: https://github.com/SlicerDMRI/ORG-Atlases
+  - Documentation: [https://github.com/SlicerDMRI/ORG-Atlases](https://github.com/SlicerDMRI/ORG-Atlases)
   - Code repository: N/A
 
 ## Installation
@@ -172,12 +172,12 @@ tools used.
 
 ### Data organization/standardization
 
-1. Install heudiconv following: https://heudiconv.readthedocs.io/en/latest/installation.html#installation
+1. Install heudiconv following the [heudiconv installation instructions](https://heudiconv.readthedocs.io/en/latest/installation.html#installation)
 
    Although a local installation was used, Singularity would work in the same
    way; only the way the tool is called would need to be changed.
 
-1. Install the BIDS validator tool following: https://github.com/bids-standard/bids-validator#quickstart
+1. Install the BIDS validator tool following the [BIDS validator quickstart guide](https://github.com/bids-standard/bids-validator#quickstart)
 
    Note that the JavaScript version ("Command line version") has been used
    here; other versions should work equally well and should give the exact
@@ -194,16 +194,15 @@ Versions used are:
 ### Preprocessing
 
 1. Install FreeSurfer (only required to point to a valid license file, as
-   the software itself is used from the Apptainer container).
+   the software itself is used from the Apptainer container) following the
+   [FreeSurfer Download and Install](https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall)
+   instructions.
 
-   https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall
-
-1. Install Apptainer (formerly known as Singularity).
-
-   https://apptainer.org/docs/user/latest/quick_start.html#quick-installation
+1. Install Apptainer (formerly known as Singularity) using their
+   [Quick Installation guide](https://apptainer.org/docs/user/latest/quick_start.html#quick-installation).
 
    For macOS and Windows systems, Apptainer needs to be installed in a Virtual
-   Machine (VM) or a Windows Subsystem for Linux (WSL) (https://learn.microsoft.com/en-ca/windows/wsl/install).
+   Machine (VM) or a Windows Subsystem for Linux ([WSL](https://learn.microsoft.com/en-ca/windows/wsl/install)).
 
    Apptainer is an open-source equivalent to Docker; these both container
    systems allow to ship all necessary dependencies.
@@ -211,12 +210,12 @@ Versions used are:
    **Note:** Apptainer containers have access only to a limited set of paths
    in the host machine (called "bind points"), so users may need to specify
    other paths so that the container obtains access to the data hosted on such
-   paths. The relevant information can be found at https://apptainer.org/docs/user/main/bind_paths_and_mounts.html.
+   paths. The relevant information can be found at the [Bind Paths and Mounts](https://apptainer.org/docs/user/main/bind_paths_and_mounts.html)
+   section.
    {: .note}
 
-1. Build the QSIprep Apptainer (Singularity) container (output is a file with the extension `sif`).
-
-   https://qsiprep.readthedocs.io/en/latest/installation.html#singularity-container
+1. Build the [QSIprep Apptainer (Singularity) container](https://qsiprep.readthedocs.io/en/latest/installation.html#singularity-container)
+   (output is a file with the extension `sif`).
 
    Pick an appropriate path (the folder must exist) to host the `*.sif` file, e.g.:
 
@@ -258,7 +257,9 @@ in the future. Scripts should work transparently.
 
 ### Data format accommodation
 
-1. Install the Scilus Apptainer container following: https://tractoflow-documentation.readthedocs.io/en/latest/installation/install.html#singularity-for-tractoflow
+1. Install the Scilus Apptainer container following the
+   [Singularity for TractoFlow](https://tractoflow-documentation.readthedocs.io/en/latest/installation/install.html#singularity-for-tractoflow)
+   instructions.
 
    The SCILPY tools will be shipped inside this container, which requires
    Apptainer to be available on the system (see #preprocessing-1).
@@ -273,7 +274,7 @@ in the future. Scripts should work transparently.
 1. Install SlicerDMRI (see in #analysis-1): the diffusion data conversion tool
    (DWIConvert) is installed together with SlicerDMRI.
 
-1. Install SimpleITK following the instructions: https://simpleitk.readthedocs.io/en/master/gettingStarted.html#wheels-for-generic-python-distribution
+1. Install SimpleITK using the [Python wheels](https://simpleitk.readthedocs.io/en/master/gettingStarted.html#wheels-for-generic-python-distribution)
 
 #### Versions
 
@@ -284,18 +285,23 @@ Versions used are:
 
 ### Analysis
 
-1. Download and install 3D Slicer following the instructions: https://slicer.readthedocs.io/en/latest/user_guide/getting_started.html#installing-3d-slicer
+1. Download and install 3D Slicer following the instructions in the
+   [Installing 3D Slicer](https://slicer.readthedocs.io/en/latest/user_guide/getting_started.html#installing-3d-slicer)
+   section.
 
    Older releases can be downloaded by using the offset parameter in the
-   download page. For example, download page from 7 days ago: http://download.slicer.org/?offset=-7
+   download page. For example, the download page from 7 days ago is [http://download.slicer.org/?offset=-7](http://download.slicer.org/?offset=-7)
 
-1. Install SlicerDMRI following the instructions in: https://dmri.slicer.org/download/
+1. Install SlicerDMRI following the instructions in the [Download section](https://dmri.slicer.org/download/)
 
-1. Install UKFTractography from the 3D Slicer Extensions Manager following: https://slicer.readthedocs.io/en/latest/user_guide/extensions_manager.html
+1. Install UKFTractography from the [3D Slicer Extensions Manager](https://slicer.readthedocs.io/en/latest/user_guide/extensions_manager.html)
+   following the [How to](https://slicer.readthedocs.io/en/latest/user_guide/extensions_manager.html#how-to) section
 
-1. Install White Matter Analysis (WMA) following the instructions in: https://dmri.slicer.org/whitematteranalysis/
+1. Install White Matter Analysis (WMA) following the instructions in the
+   [WMA Installation and Usage](https://dmri.slicer.org/whitematteranalysis/) section
 
-1. Download the version of the ORG Atlas that is intended to be used from: https://zenodo.org/record/8082481
+1. Download the version of the ORG Atlas that is intended to be used from the
+   [8082481 Zenodo record](https://zenodo.org/records/8082481)
 
 #### Versions
 
@@ -425,8 +431,9 @@ tool.
 
    **Note:** The denoising step in the preprocessing operation is chosen to
    be applied to all combined dMRI data. Further information related to this
-   choice can be found in the https://qsiprep.readthedocs.io/en/latest/preprocessing.html?highlight=separate_all_dwis#merging-multiple-scans-from-a-session
-   and https://qsiprep.readthedocs.io/en/latest/preprocessing.html#denoising-and-merging-images.
+   choice can be found in the [Merging multiple scans from a session](https://qsiprep.readthedocs.io/en/latest/preprocessing.html?highlight=separate_all_dwis#merging-multiple-scans-from-a-session)
+   and [Denoising and Merging Images](https://qsiprep.readthedocs.io/en/latest/preprocessing.html#denoising-and-merging-images)
+   sections of the QSIprep documentation.
 
 ## Data format accommodation
 
@@ -595,8 +602,8 @@ This is the same $0, 0, 0$ as in MNI space, so the brains will look somewhat
 aligned if you open the MNI template and the AC-PC image, as long as it is an
 adult brain, and despite no (MNI) template warping taking place by default.
 
-Further documentation can be found at:
-https://qsiprep.readthedocs.io/en/latest/quickstart.html?highlight=AC-pc#specifying-outputs
+Further documentation can be found at the [Specifying outputs](https://qsiprep.readthedocs.io/en/latest/quickstart.html?highlight=AC-pc#specifying-outputs)
+section of the QSIPrep documentation.
 
 ### Resolution
 
