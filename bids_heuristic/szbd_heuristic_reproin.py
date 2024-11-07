@@ -202,6 +202,46 @@ protocols2fix: dict[str | re.Pattern[str], list[tuple[str, str]]] = {
             ('^dMRI_dir99_PA', 'dwi_dir-pa_acq-dir99'),
             ('SpinEchoFieldMap_AP', r'fmap-epi_dir-ap_acq-dir99_run+'),
             ('SpinEchoFieldMap_PA', r'fmap-epi_dir-pa_acq-dir99_run+'),
+        ],
+    "ac6b6cc555964ad21e74ec331a03fb3a":
+        [
+            ('^MEMPRAGE.*', 'anat-T1w'),
+            ('^dMRI_dir99_AP', 'dwi_dir-ap_acq-dir99'),
+            ('^dMRI_dir99_PA', 'dwi_dir-pa_acq-dir99'),
+            ('SpinEchoFieldMap_AP', r'fmap-epi_dir-ap_acq-dir99_run+'),
+            ('SpinEchoFieldMap_PA', r'fmap-epi_dir-pa_acq-dir99_run+'),
+        ],
+    "1b882f0951437ce42b24ef685b42fc0a":
+        [
+            ('^MEMPRAGE.*', 'anat-T1w'),
+            ('^dMRI_dir99_AP', 'dwi_dir-ap_acq-dir99'),
+            ('^dMRI_dir99_PA', 'dwi_dir-pa_acq-dir99'),
+            ('SpinEchoFieldMap_AP', r'fmap-epi_dir-ap_acq-dir99_run+'),
+            ('SpinEchoFieldMap_PA', r'fmap-epi_dir-pa_acq-dir99_run+'),
+        ],
+    "ed22ca70b4960c483b1809a3e7f1d2b8":
+        [
+            ('^MEMPRAGE.*', 'anat-T1w'),
+            ('^dMRI_dir99_AP', 'dwi_dir-ap_acq-dir99'),
+            ('^dMRI_dir99_PA', 'dwi_dir-pa_acq-dir99'),
+            ('SpinEchoFieldMap_AP', r'fmap-epi_dir-ap_acq-dir99_run+'),
+            ('SpinEchoFieldMap_PA', r'fmap-epi_dir-pa_acq-dir99_run+'),
+        ],
+    "df0c9a60f70f09e0b40d78a8c87f5325":
+        [
+            ('^MEMPRAGE.*', 'anat-T1w'),
+            ('^dMRI_dir99_AP', 'dwi_dir-ap_acq-dir99'),
+            ('^dMRI_dir99_PA', 'dwi_dir-pa_acq-dir99'),
+            ('SpinEchoFieldMap_AP', r'fmap-epi_dir-ap_acq-dir99_run+'),
+            ('SpinEchoFieldMap_PA', r'fmap-epi_dir-pa_acq-dir99_run+'),
+        ],
+    "4438587a7b6564742639d6313cfbfad5":
+        [
+            ('^MEMPRAGE.*', 'anat-T1w'),
+            ('^dMRI_dir99_AP', 'dwi_dir-ap_acq-dir99'),
+            ('^dMRI_dir99_PA', 'dwi_dir-pa_acq-dir99'),
+            ('SpinEchoFieldMap_AP', r'fmap-epi_dir-ap_acq-dir99_run+'),
+            ('SpinEchoFieldMap_PA', r'fmap-epi_dir-pa_acq-dir99_run+'),
         ]
 }
 
