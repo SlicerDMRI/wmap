@@ -10,7 +10,7 @@ usage()
   echo "  in_bids_dirname             Input BIDS-compliant, participant data dirname"
   echo "  out_dirname                 Output dirname"
   echo "  fs_license_fname            FreeSurfer license filename (*.txt)"
-  echo "  qsiprep_singularity_fname   QSIprep singulariy filename (*.sif)"
+  echo "  qsiprep_singularity_fname   QSIprep singularity filename (*.sif)"
   echo "  work_dirname                Work dirname"
   echo
   echo "optional arguments:"
