@@ -11,7 +11,7 @@ usage()
   echo "  in_bval_fname              Input bval filename (*.bval)"
   echo "  in_bvec_fname              Input bvec filename (*.bvec)"
   echo "  out_dirname                Output dirname"
-  echo "  scilus_singularity_fname   Scilus singulariy filename (*.sif)"
+  echo "  scilus_singularity_fname   Scilus singularity filename (*.sif)"
   echo "  data_dirname               Data dirname for singularity bind point"
   echo
   echo "optional arguments:"
