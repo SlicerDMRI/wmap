@@ -419,7 +419,7 @@ tool.
 
 > ℹ️ **Note**
 >
-> Apptainer uses an intermediate work directory (`--work_dir`) where
+> Apptainer uses an intermediate work directory (`--workdir`) where
 > intermediate files are written as the processing take place, and before the
 > final data gets written to the destination path. This work directory may
 > grow considerably, even for a single participant. Similarly, if some jobs
