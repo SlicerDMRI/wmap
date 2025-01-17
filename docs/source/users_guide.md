@@ -189,8 +189,8 @@ tools used.
 #### Versions
 
 Versions used are:
-- heudiconv: 0.13.1
-- bids-validator: 1.12.0 (Node.js v20.5.1)
+- heudiconv: 1.3.1
+- bids-validator: 1.15.0 (Node.js v20.5.1)
 
 ### Preprocessing
 
@@ -222,7 +222,7 @@ Versions used are:
    Pick an appropriate path (the folder must exist) to host the `*.sif` file, e.g.:
 
    ```bash
-   $ singularity build /mnt/data/containers/qsiprep/qsiprep-0.19.0.sif docker://pennbbl/qsiprep:0.19.0
+   $ singularity build /mnt/data/containers/qsiprep/qsiprep-1.0.0rc1.sif docker://pennbbl/qsiprep:1.0.0rc1
    ```
 
    If the following error appears when building the container:
@@ -236,21 +236,22 @@ Versions used are:
    it means that when building the container the filesystem has run out of
    disk space to store temporary data required in the build process. In order
    to solve the issue, we need to specify a temporary folder where we have
-   sufficient disk space using the `--tmpdir` option. Pick an appropriate path
-   for this purpose (the folder must exist), e.g.:
+   sufficient disk space either by setting the `TMPDIR` environment variable
+   or using the `--tmpdir` option. Pick an appropriate path for this purpose
+   (the folder must exist), e.g.:
 
    ```bash
-   $ singularity build --tmpdir /mnt/data/containers/.singularity /mnt/data/containers/qsiprep/qsiprep-0.19.0.sif docker://pennbbl/qsiprep:0.19.0
+   $ singularity build --tmpdir /mnt/data/containers/.singularity /mnt/data/containers/qsiprep/qsiprep-1.0.0rc1.sif docker://pennbbl/qsiprep:1.0.0rc1
    ```
 
-   The tested version corresponds to 0.19.0.
+   The tested version corresponds to 1.0.0rc1.
 
 #### Versions
 
 Versions used are:
 - Apptainer: 3.11.3 (Singularity)
 - FreeSufer: freesurfer-linux-ubuntu22_x86_64-7.3.2-20220804-6354275
-- QSIprep: 0.19.0
+- QSIprep: 1.0.0rc1
 
 > ℹ️ **Note**
 >
@@ -390,7 +391,7 @@ tool.
 1. Run the `qsiprep_preprocess.sh` script from a terminal:
 
    ```bash
-   $ qsiprep_preprocess.sh [in_bids_path] [out_path] [fs_license_fname] [qsiprep_singularity_fname] [work_dir]
+   $ qsiprep_preprocess.sh [in_bids_dirname] [out_dirname] [fs_license_fname] [qsiprep_singularity_fname] [work_dirname]
    ```
 
    e.g.
@@ -400,7 +401,7 @@ tool.
        /mnt/data/study_name_bids_data/heudiconv \
        /mnt/data/study_name_bids_data/qsiprep \
        /usr/local/freesurfer/license.txt \
-       /mnt/data/containers/qsiprep/qsiprep-0.19.0.sif \
+       /mnt/data/containers/qsiprep/qsiprep-1.0.0rc1.sif \
        /mnt/data/workdir
    ```
 
@@ -418,7 +419,7 @@ tool.
 
 > ℹ️ **Note**
 >
-> Apptainer uses an intermediate work directory (`--work_dir`) where
+> Apptainer uses an intermediate work directory (`--workdir`) where
 > intermediate files are written as the processing take place, and before the
 > final data gets written to the destination path. This work directory may
 > grow considerably, even for a single participant. Similarly, if some jobs
