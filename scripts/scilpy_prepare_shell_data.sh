@@ -2,17 +2,18 @@
 
 usage()
 {
-  echo "usage: $(basename $0) [-h] [in_nifti_fname] [in_bval_fname] [in_bvec_fname] [out_dirname] [scilus_singularity_fname] [data_dirname]"
+  echo "usage: $(basename $0) [-h] [in_qsiprep_dirname] [out_dirname] [work_dirname] [in_nifti_fname] [in_bval_fname] [in_bvec_fname] [scilus_singularity_fname]"
   echo
   echo "Prepare preprocessed dMRI shell data for UKF tractography using SCILPY."
   echo
   echo "positional arguments:"
+  echo "  in_qsiprep_dirname         Input data dirname"
+  echo "  out_dirname                Output dirname"
+  echo "  work_dirname               Singularity work dirname"
   echo "  in_nifti_fname             Input NIfTI filename (*.nii.gz)"
   echo "  in_bval_fname              Input bval filename (*.bval)"
   echo "  in_bvec_fname              Input bvec filename (*.bvec)"
-  echo "  out_dirname                Output dirname"
   echo "  scilus_singularity_fname   Scilus singularity filename (*.sif)"
-  echo "  data_dirname               Data dirname for singularity bind point"
   echo
   echo "optional arguments:"
   echo "  -h, --help  show this help message and exit"
@@ -41,17 +42,18 @@ done
 # Set positional arguments in their proper place
 eval set -- "$args"
 
-if test "${args[@]}" = "" || [ "$#" -lt 6 ]; then
+if test "${args[@]}" = "" || [ "$#" -lt 7 ]; then
   echo "Missing arguments."
   usage
 fi
 
-in_nifti_fname=$1
-in_bval_fname=$2
-in_bvec_fname=$3
-out_dirname=$4
-scilus_singularity_fname=$5
-data_dirname=$6
+in_qsiprep_dirname=$1
+out_dirname=$2
+work_dirname=$3
+in_nifti_fname=$4
+in_bval_fname=$5
+in_bvec_fname=$6
+scilus_singularity_fname=$7
 
 dash="-"
 ext_sep="."
@@ -91,7 +93,10 @@ b0_thr=20
 out_b0_mean_fname=$(compose_filename_from_basename ${in_nifti_fname} ${out_dirname} ${b0_mean_label} ${nii_gz_ext})
 
 singularity exec \
-  --bind ${data_dirname} \
+  --bind ${in_qsiprep_dirname} \
+  --bind ${out_dirname} \
+  --bind ${work_dirname} \
+  --workdir ${work_dirname} \
   ${scilus_singularity_fname} \
   scil_extract_b0.py \
   ${in_nifti_fname} \
@@ -142,7 +147,10 @@ out_bval_shell_bval_fname=$(compose_filename_from_basename ${in_nifti_fname} ${o
 out_bval_shell_bvec_fname=$(compose_filename_from_basename ${in_nifti_fname} ${out_dirname} ${bval_shell_label} ${bvec_ext})
 
 singularity exec \
-  --bind ${data_dirname} \
+  --bind ${in_qsiprep_dirname} \
+  --bind ${out_dirname} \
+  --bind ${work_dirname} \
+  --workdir ${work_dirname} \
   ${scilus_singularity_fname} \
   scil_extract_dwi_shell.py \
   ${in_nifti_fname} \
@@ -170,7 +178,10 @@ out_b0_mean_bval_shell_bval_fname=$(compose_filename_from_basename ${in_nifti_fn
 out_b0_mean_bval_shell_bvec_fname=$(compose_filename_from_basename ${in_nifti_fname} ${out_dirname} ${b0_mean_bval_shell_label} ${bvec_ext})
 
 singularity exec \
-  --bind ${data_dirname} \
+  --bind ${in_qsiprep_dirname} \
+  --bind ${out_dirname} \
+  --bind ${work_dirname} \
+  --workdir ${work_dirname} \
   ${scilus_singularity_fname} \
   scil_concatenate_dwi.py \
   ${out_b0_mean_bval_shell_nifti_fname} \
@@ -190,4 +201,3 @@ echo "Concatenated b0 and b${bval} files written to:"
 echo ${out_b0_mean_bval_shell_nifti_fname}
 echo ${out_b0_mean_bval_shell_bval_fname}
 echo ${out_b0_mean_bval_shell_bvec_fname}
-
