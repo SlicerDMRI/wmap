@@ -390,7 +390,7 @@ tool.
 1. Run the `qsiprep_preprocess.sh` script from a terminal:
 
    ```bash
-   $ qsiprep_preprocess.sh [in_bids_path] [out_path] [fs_license_fname] [qsiprep_singularity_fname] [work_dir]
+   $ qsiprep_preprocess.sh [in_bids_dirname] [out_dirname] [fs_license_fname] [qsiprep_singularity_fname] [work_dirname]
    ```
 
    e.g.
