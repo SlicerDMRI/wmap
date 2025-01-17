@@ -68,6 +68,6 @@ singularity run --cleanenv \
   participant \
   --output-resolution ${output_resolution} \
   --fs-license-file ${mapped_fs_license_fname} \
-  --work_dir ${work_dirname} \
-  --skip_bids_validation
+  --w ${work_dirname} \
+  --skip-bids-validation
 
