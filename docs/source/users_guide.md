@@ -460,19 +460,20 @@ tool.
    reference.
 
    ```bash
-   $ scilpy_prepare_shell_data.sh [in_nifti_fname] [in_bval_fname] [in_bvec_fname] [out_dirname] [scilus_singularity_fname] [data_dirname]
+   $ scilpy_prepare_shell_data.sh [in_qsiprep_dirname] [out_dirname] [work_dirname] [in_nifti_fname] [in_bval_fname] [in_bvec_fname] [scilus_singularity_fname]
    ```
 
    e.g.
 
    ```bash
    $ scilpy_prepare_shell_data.sh \
+       /mnt/data/study_name_bids_data/qsiprep \
+       /mnt/data/study_name_bids_data/prepare_shell_data \
+       /mnt/data/workdir \
        /mnt/data/study_name_bids_data/qsiprep/sub-001/dwi/sub-001_acq-dir99_space-T1w_desc-preproc_dwi.nii.gz \
        /mnt/data/study_name_bids_data/qsiprep/sub-001/dwi/sub-001_acq-dir99_space-T1w_desc-preproc_dwi.bval \
        /mnt/data/study_name_bids_data/qsiprep/sub-001/dwi/sub-001_acq-dir99_space-T1w_desc-preproc_dwi.bvec \
-       /mnt/data/study_name_bids_data/prepare_shell_data \
-       /mnt/data/containers/scilus/containers_scilus_1.5.0.sif \
-       /mnt/data
+       /mnt/data/containers/scilus/containers_scilus_1.5.0.sif
    ```
 
    **Note:** When executing the above script the shell data concatenation step
