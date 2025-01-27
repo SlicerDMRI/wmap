@@ -284,7 +284,7 @@ Versions used are:
 #### Versions
 
 Versions used are:
-- SCILPY (Scilus container): scilus 1.5.0
+- SCILPY (Scilus container): scilus 2.0.2
 - DWIConvert: (see SlicerDMRI version in [Analysis-versions](#analysis-versions))
 - SimpleITK: 2.2.1
 
@@ -473,7 +473,7 @@ tool.
        /mnt/data/study_name_bids_data/qsiprep/sub-001/dwi/sub-001_acq-dir99_space-T1w_desc-preproc_dwi.nii.gz \
        /mnt/data/study_name_bids_data/qsiprep/sub-001/dwi/sub-001_acq-dir99_space-T1w_desc-preproc_dwi.bval \
        /mnt/data/study_name_bids_data/qsiprep/sub-001/dwi/sub-001_acq-dir99_space-T1w_desc-preproc_dwi.bvec \
-       /mnt/data/containers/scilus/containers_scilus_1.5.0.sif
+       /mnt/data/containers/scilus/scilus-2.0.2.sif
    ```
 
    **Note:** When executing the above script the shell data concatenation step
@@ -634,39 +634,6 @@ parameters in the `ukf_compute_tractography.sh` script), and other parameters
 are kept to their default values. The proposed values were found to be
 appropriate for the data used during the development. Users are encouraged to
 adjust the parameter values if results are suboptimal after visual inspection.
-
-### Python packages
-
-Scilus 1.5.0 requires `NumPy < 1.25.0`: if `NumPy` is installed system-wide,
-and it is picked up when running `scilpy_prepare_shell_data.sh` (despite using
-the container), if `NumPy`'s version is `>= 1.25.0`, the following error will
-be raised:
-
-```
-Traceback (most recent call last):
-  File "/usr/local/bin/scil_extract_b0.py", line 33, in <module>
-    sys.exit(load_entry_point('scilpy', 'console_scripts', 'scil_extract_b0.py')())
-  File "/usr/local/bin/scil_extract_b0.py", line 25, in importlib_load_entry_point
-    return next(matches).load()
-  File "/usr/lib/python3.10/importlib/metadata/__init__.py", line 171, in load
-    module = import_module(match.group('module'))
-  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "/scilpy/scripts/scil_extract_b0.py", line 14, in <module>
-    from dipy.core.gradients import gradient_table
-  File "/usr/local/lib/python3.10/dist-packages/dipy/__init__.py", line 41, in <module>
-    from numpy.testing import Tester
-ImportError: cannot import name 'Tester' from 'numpy.testing' (/home/<username>/.local/lib/python3.10/site-packages/numpy/testing/__init__.py)
-```
-
-In order to solve this, `NumPy` needs to be downgraded, i.e.
-`pip install --upgrade numpy==1.24`.
 
 ## Citations
 
