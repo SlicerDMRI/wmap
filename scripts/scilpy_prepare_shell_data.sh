@@ -86,7 +86,7 @@ function compose_filename_from_basename() {
 
 # Extract mean b0
 
-# https://scilpy.readthedocs.io/en/stable/scripts/scil_extract_b0.html
+# https://scilpy.readthedocs.io/en/stable/scripts/scil_dwi_extract_b0.html
 
 b0_thr=20
 
@@ -98,7 +98,7 @@ singularity exec \
   --bind ${work_dirname} \
   --workdir ${work_dirname} \
   ${scilus_singularity_fname} \
-  scil_extract_b0.py \
+  scil_dwi_extract_b0.py \
   ${in_nifti_fname} \
   ${in_bval_fname} \
   ${in_bvec_fname} \
@@ -135,7 +135,7 @@ echo ${out_b0_mean_4d_bvec_fname}
 
 # Extract b-value
 
-# https://scilpy.readthedocs.io/en/stable/scripts/scil_extract_dwi_shell.html
+# https://scilpy.readthedocs.io/en/stable/scripts/scil_dwi_extract_shell.html
 
 bval=3000
 bval_tol=100
@@ -152,7 +152,7 @@ singularity exec \
   --bind ${work_dirname} \
   --workdir ${work_dirname} \
   ${scilus_singularity_fname} \
-  scil_extract_dwi_shell.py \
+  scil_dwi_extract_shell.py \
   ${in_nifti_fname} \
   ${in_bval_fname} \
   ${in_bvec_fname} \
@@ -169,7 +169,7 @@ echo ${out_bval_shell_bvec_fname}
 
 # Concatenate mean b0 and b-value data
 
-# https://scilpy.readthedocs.io/en/stable/scripts/scil_concatenate_dwi.html
+# https://scilpy.readthedocs.io/en/stable/scripts/scil_dwi_concatenate.html
 
 b0_mean_bval_shell_label=${b0_mean_label}${dash}${bval_label}${bval}
 
@@ -183,7 +183,7 @@ singularity exec \
   --bind ${work_dirname} \
   --workdir ${work_dirname} \
   ${scilus_singularity_fname} \
-  scil_concatenate_dwi.py \
+  scil_dwi_concatenate.py.py \
   ${out_b0_mean_bval_shell_nifti_fname} \
   ${out_b0_mean_bval_shell_bval_fname} \
   ${out_b0_mean_bval_shell_bvec_fname} \
