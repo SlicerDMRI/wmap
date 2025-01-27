@@ -470,9 +470,9 @@ tool.
        /mnt/data/study_name_bids_data/qsiprep \
        /mnt/data/study_name_bids_data/prepare_shell_data \
        /mnt/data/workdir \
-       /mnt/data/study_name_bids_data/qsiprep/sub-001/dwi/sub-001_acq-dir99_space-T1w_desc-preproc_dwi.nii.gz \
-       /mnt/data/study_name_bids_data/qsiprep/sub-001/dwi/sub-001_acq-dir99_space-T1w_desc-preproc_dwi.bval \
-       /mnt/data/study_name_bids_data/qsiprep/sub-001/dwi/sub-001_acq-dir99_space-T1w_desc-preproc_dwi.bvec \
+       /mnt/data/study_name_bids_data/qsiprep/sub-001/dwi/sub-001_acq-dir99_space-ACPC_desc-preproc_dwi.nii.gz \
+       /mnt/data/study_name_bids_data/qsiprep/sub-001/dwi/sub-001_acq-dir99_space-ACPC_desc-preproc_dwi.bval \
+       /mnt/data/study_name_bids_data/qsiprep/sub-001/dwi/sub-001_acq-dir99_space-ACPC_desc-preproc_dwi.bvec \
        /mnt/data/containers/scilus/scilus-2.0.2.sif
    ```
 
@@ -505,10 +505,10 @@ tool.
 
    ```bash
    $ slicer_convert_nifti2nrrd.sh \
-       /mnt/data/study_name_bids_data/prepare_shell_data/sub-001_acq-dir99_space-T1w_desc-preproc_dwi_b0_mean-b3000.nii.gz \
-       /mnt/data/study_name_bids_data/prepare_shell_data/sub-001_acq-dir99_space-T1w_desc-preproc_dwi_b0_mean-b3000.bval \
-       /mnt/data/study_name_bids_data/prepare_shell_data/sub-001_acq-dir99_space-T1w_desc-preproc_dwi_b0_mean-b3000.bvec \
-       /mnt/data/study_name_bids_data/nifti2nrrd/sub-001_acq-dir99_space-T1w_desc-preproc_dwi_b0_mean-b3000.nrrd
+       /mnt/data/study_name_bids_data/prepare_shell_data/sub-001_acq-dir99_space-ACPC_desc-preproc_dwi_b0_mean-b3000.nii.gz \
+       /mnt/data/study_name_bids_data/prepare_shell_data/sub-001_acq-dir99_space-ACPC_desc-preproc_dwi_b0_mean-b3000.bval \
+       /mnt/data/study_name_bids_data/prepare_shell_data/sub-001_acq-dir99_space-ACPC_desc-preproc_dwi_b0_mean-b3000.bvec \
+       /mnt/data/study_name_bids_data/nifti2nrrd/sub-001_acq-dir99_space-ACPC_desc-preproc_dwi_b0_mean-b3000.nrrd
    ```
 
 1. Change the brainmask pixel type: the brainmask computed by QSIprep has to
@@ -524,8 +524,8 @@ tool.
 
    ```bash
    $ sitk_convert_mask_nifti2nrrd.sh \
-       /mnt/data/study_name_bids_data/qsiprep/sub-001/anat/sub-001_acq-dir99_space-T1w_desc-brain_mask.nii.nii.gz \
-       /mnt/data/study_name_bids_data/nifti2nrrd/sub-001_acq-dir99_space-T1w_acq-dir99_space-T1w_desc-brain_mask.nrrd
+       /mnt/data/study_name_bids_data/qsiprep/sub-001/anat/sub-001_acq-dir99_space-ACPC_desc-brain_mask.nii.nii.gz \
+       /mnt/data/study_name_bids_data/nifti2nrrd/sub-001_acq-dir99_space-ACPC_desc-brain_mask.nrrd
    ```
 
    The script converts the source brainmask NIfTI data format file to an NRRD
@@ -545,9 +545,9 @@ tool.
 
    ```bash
    $ ukf_compute_tractography.sh \
-       /mnt/data/study_name_bids_data/nifti2nrrd/sub-001_acq-dir99_space-T1w_desc-preproc_dwi_b0_mean-b3000.nrrd \
-       /mnt/data/study_name_bids_data/nifti2nrrd/sub-001_acq-dir99_space-T1w_desc-brain_mask.nrrd \
-       /mnt/data/study_name_bids_data/ukftractography/sub-001_acq-dir99_space-T1w_desc-preproc_dwi_b0_mean-b3000.vtk
+       /mnt/data/study_name_bids_data/nifti2nrrd/sub-001_acq-dir99_space-ACPC_desc-preproc_dwi_b0_mean-b3000.nrrd \
+       /mnt/data/study_name_bids_data/nifti2nrrd/sub-001_acq-dir99_space-ACPC_desc-brain_mask.nrrd \
+       /mnt/data/study_name_bids_data/ukftractography/sub-001_acq-dir99_space-ACPC_desc-preproc_dwi_b0_mean-b3000.vtk
    ```
 
 ### Data accommodation
