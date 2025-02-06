@@ -286,7 +286,7 @@ Versions used are:
 Versions used are:
 - SCILPY (Scilus container): scilus 2.0.2
 - DWIConvert: (see SlicerDMRI version in [Analysis-versions](#analysis-versions))
-- SimpleITK: 2.2.1
+- SimpleITK: 2.4.1
 
 ### <a id="analysis-installation"></a>Analysis
 
