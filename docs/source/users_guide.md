@@ -524,7 +524,7 @@ tool.
 
    ```bash
    $ sitk_convert_mask_nifti2nrrd.sh \
-       /mnt/data/study_name_bids_data/qsiprep/sub-001/anat/sub-001_acq-dir99_space-ACPC_desc-brain_mask.nii.gz \
+       /mnt/data/study_name_bids_data/qsiprep/sub-001/dwi/sub-001_acq-dir99_space-ACPC_desc-brain_mask.nii.gz \
        /mnt/data/study_name_bids_data/nifti2nrrd/sub-001_acq-dir99_space-ACPC_desc-brain_mask.nrrd
    ```
 
