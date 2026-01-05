@@ -1,7 +1,7 @@
 [build-system]
 requires = [
-    "setuptools >= 66",
-    "setuptools_scm >= 6.4",
+    "setuptools >= 77.0.1",
+    "setuptools_scm >= 8.1.0",
 ]
 
 [project]
@@ -23,6 +23,8 @@ maintainers = [
 name = "wmap"
 readme = "README.md"
 requires-python = ">=3.10"
+license = "3D-Slicer-1.0"
+license-files = ["LICENSE.txt"]
 
 [project.optional-dependencies]
 doc = [
